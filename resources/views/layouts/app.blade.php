@@ -21,27 +21,30 @@
     <script src="{{ asset('node_modules/datatables/datatables.min.js') }}"></script>
 </head>
 
-<body class="font-sans antialiased bg-light background">
-    @include('layouts.navigation')
+<body class="bg-light background">
+    <div class="container-fluid overflow-hidden">
+        <div class="row vh-100 overflow-auto">
+            <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex sticky-top">
+                @include('layouts.navigation')
+            </div>
+            <div class="col d-flex flex-column h-sm-100">
+                <header class="row py-3 bg-white shadow-sm border-bottom menu">
+                        {{ $header }}
+                </header>
 
-    <!-- Page Heading -->
-    <header class="d-flex py-3 bg-white shadow-sm border-bottom menu">
-        <div class="container">
-            {{ $header }}
+                <main class="row overflow-auto">
+                    <div class="col pt-4 mb-3">
+                        {{ $slot }}
+                    </div>
+                </main>
+                <footer class="row py-1 mt-auto">
+                    <nav class="">
+                        <h6 class="text-center ">SisController &copy; 2022</h6>
+                    </nav>
+                </footer>
+            </div>
         </div>
-    </header>
-
-    <!-- Page Content -->
-    <main class="container-xl my-5">
-        {{ $slot }}
-    </main>
-
-    <footer class="container-xl">
-        <!-- As a heading -->
-        <nav class=>
-            <h6 class="text-center">SisController &copy; 2022{{ date('Y') > 2022 ? '-'.date('Y'):'' }}</h6>
-        </nav>
-    </footer>
+    </div>
 </body>
 
 </html>
