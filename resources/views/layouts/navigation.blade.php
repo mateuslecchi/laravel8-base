@@ -8,9 +8,8 @@
             <i class="fs-5 bi-speedometer2"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span>
         </x-nav-link>
         
-        @hasanyrole('Super Admin|Administrador|Empréstimos - Consultar|Empréstimos - Consultar|Usuários -
-                Consultar|Usuários - Editar')
-                <x-dropdown id="optionsDropdown" :active="request()->routeIs('emprestimos*','usuarios*')">
+        @hasanyrole('Super Admin|Administrador')
+                <x-dropdown id="optionsDropdown" :active="request()->routeIs('usuarios*')">
                     <x-slot name="trigger">
                         <i class="fs-5 bi bi-archive"></i>
                         Outros
