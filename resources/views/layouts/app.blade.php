@@ -10,14 +10,14 @@
 
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('assets/icon2.png') }}" />
-    <link rel="stylesheet" href="{{ asset('node_modules/tom-select/css/tom-select.bootstrap5.min.css') }}">
+    <link rel="stylesheet" href="{{ mix('node_modules/tom-select/css/tom-select.bootstrap5.min.css') }}">
     <link rel="stylesheet" href="{{ asset('node_modules/datatables/datatables.min.css') }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('node_modules/tom-select/js/tom-select.complete.min.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ mix('node_modules/tom-select/js/tom-select.complete.min.js') }}"></script>
     <script src="{{ asset('node_modules/datatables/datatables.min.js') }}"></script>
 </head>
 
